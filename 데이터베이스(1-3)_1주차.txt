@@ -1,0 +1,456 @@
+
+최종수업목표
+데이터 모델링을 보고 주어진 조건을 만족하는 SQL을 작성할 수 있다.
+JAVA프로그램을 통해 SQL을 실행할 수 있다. 
+
+
+
+D:\A_TeachingMaterial\2.Oracle\other\gitTest
+
+1. 폴더안에 .git 이라는 폴더가 존재해야 형상관리로 인식이 된다. 
+ ==> 초기화
+
+working area(gitTest)
+
+.git(staging area / local repository)
+
+romote repository (github)
+
+작업디렉토리 WORKING DIRECTORY
+ADD
+스테이지(인덱스) STAGING AREA
+COMMIT
+저장소 .GIT DIRECTORY 
+PUSH 
+원격저장소 GITHUB GITBUCKET
+
+
+
+로컬마스터 
+오리진마스터 원격저장소
+
+git-scm.com
+GUI clients 요청을 보내는 단독으로 실행이 될 수 있지 않다.
+
+
+<<2강>>
+GITHUB.COM
+
+1.GITHUB 본인계정에 SQL이라는 이름으로 새로운 원격 저장소 생성 
+-REPOSITORY-NEW-SQL
+-공용으로 설정하기 
+-CREATE REPOSITORY
+
+2. D:\A_TeachingMaterial\2.Oracle\other\sql 폴더를 git 로컬저장소 초기화 
+sql이라는 폴더를 만들어준다.
+폴더안에 .git 이라는 폴더가 존재해야 형상관리로 인식이 된다. 
+ ==> 초기화
+
+
+3. 2번의 로컬 저장소와 1번의 원격저장소를 연결 설정 
+소스트리 +표시누르고 create 
+탐색에서 경로설정을 해준다 생성 .git이라는 파일이 만들어짐
+
+설정 추가
+원격이름 origin 
+github에서 경로 복사해서 넣어준다.
+
+4.test.txt (파일내용은 test)
+commit 후 원격저장소에 반영
+
+add
+위로 올라가면 코멘트를 적어주기 
+-에 바뀐 내용 즉시 푸시 체크박스 설정
+
+oracle SQL developer 
+접속-우클릭-새접속-system(클릭)-테스트-성공
+
+<SQL> 
+-프로그램이 실행되는 영역 : 메모리 (RAM)
+-저장을 하지 않고 프로그램을 종료하면?? 
+작업 내역을 프로그램 종류 후에도 다시 사용 할 수 있도록 파일로 저장 
+
+*파일의종류*
+1.텍스트파일
+2.바이너리파일(이진파일)
+
+여러사람이 동시에 파일을 열게되면??
+두번째 사용하는 사람이 동시에 수정이 안되도록 읽기전용으로 연다.
+단점: 동시에 파일을 수정할 수 없다.
+
+동시에 사용할 수 없는 시스템은 존재가치가 떨어질 수 밖에 없다.
+
+파일시스템
+1.데이터중복
+2.보안/공유미흡
+3.복구미흡
+4.프로그램이 파일에 종속
+
+DBMS
+1.데이터중복방지
+2.보안/공유
+3.백업/복구
+4.SQL표준에따른프로그램비종속
+5.동시에 데이터접근이 가능하다.
+
+JAVA언어를 통해 개발
+
+개념설명
+이론(문법)
+시연/실습
+
+SQLD 추천 
+
+데이터베이스 
+여러사람에 의해 공유될 목적으로 저장된 데이터의 집합
+인사시스템
+직원/급여/조직/발령
+코레일예약시스템
+노선/좌석/티켓/예약/결제
+
+DBMS 
+데이터베이스를 관리하면
+다른 응용프로그램이 데이터베이스를 공유하며 사용 할 수 있는 환경
+(한글, 엑셀과 같은 프로그램)
+데이터백업 복구
+속도, 공유 동시 접근 안전성 안정성 확정성
+ORACLE MS SQL MYSQL MARIADB SB2
+
+시험에 나옴 트랜잭션 : 여러단계의 과정을 하나의 작업행위로 묶는 단위
+
+원자성:입출금 다 성공을 하거나 다 실패를 하거나
+일과성 
+격리성
+ 
+SQL이란 구조화된 질의 언어
+DBMS와 통신하기 위한 유일한 수단 
+정형(데이터의 틀이 잡혀있다) 엑셀 
+비정형(데이터의 틀이 변경가능하다. 예상이어려운
+
+
+rdbms
+안정성 무결성
+제조업 금용 회계 등 데이터의 일치가 중요한 시스템
+
+nosql
+우연한 데이터 구조
+한두건쯤 누락되도 문제 없는 데이터
+센서자료 sns분석 통계치
+속도도 빨라..
+
+한쪽이 우월한 개념이 아님 목적에 따라 선택
+
+dbms dbms에서 데이터를 관리할 수 있는 유일한 언어
+sql
+1.DDL data definition language 데이터정의
+2.DML data manifulation language 데이터조작
+3.DCL  data control language 데이터제어
+4.TCL transaction 트랙잭션제어
+
+SQL의 특징
+쉬운문법/집합적사고
+HOW(어떻게?)가 없다.
+일반적인 프로그래밍 언어와 다르게 로직이 없다.
+그래서 쉬울수도 있고 어려울 수도 있다.
+
+필요한 데이터 집합을 에스큐엘을 통해 표현
+
+해당 조거에 마즌 데이터응 DBMS가 알아서 찾는다.
+개발자는 숙제를 내주는 선생님
+EMP테이블에서 사원번호가 7365보다 큰 사원의 이름, 입사일자를 조회
+
+create user sem 유저아이디
+identified by java 비번
+quota unlimited 제한하다. 
+quota 0m on system; 저장공간을 허용하지 않겠다. 
+
+테이블을 만들고 데이터를 넣는작업
+
+
+table 
+데이터베이스에서 가장 많이 사용하는 객체
+데이터를 저장하는 2차원 구조의 저장소
+행 테이블의 가로방향
+열 테이블의 세로방향
+
+<<중요>>
+대소문자를 가리지 않음
+여러줄에 걸쳐 작성가능
+단 keyword는 한줄에 표현(select from)
+SQL의 종료는 ; 세미콜론 
+
+수업시간룰
+keyword 대문자
+SECECT 
+TO_CHAR 
+그외 소문자 
+
+도구 환경설정 인코딩 UTF-8
+
+SELECT *ㅣ {column [alias], ......} 
+from table  [alias]
+[order by ....... ]
+중괄호는 여러번반복이 될 수 있다.
+대괄호는 있을수도 없을수도 있다.
+from 절을 통해 데이터를 가져올 테이블을 명시
+
+
+SELECT * FROM emp;
+--데이터 조회 방법
+--FROM : 데이터를 조회할 테이블 명시
+--select : 조회 하고자 하는 컬럼명 (테이블에 있는 컬럼명)
+--         테이블의 모든 컬럼을 조회할 경우 *를 기술
+
+SELECT empno, ename
+FROM emp;
+
+
+
+SELECT *
+FROM emp;
+--EMPNO : 직원번호, ENAME : 직원이름, JOB : 담당업무
+--MGR: 상위 담당자, HIREDATE : 입사일자, SAL : 급여
+--COMM : 상여금, DEPTNO : 부서번호
+
+커밋
+셀렉트 쿼리 기본 문법
+
+<<3강>>
+
+전시간복습
+1. 파일과 dbms의 차이
+
+2. SQL구문의 종류(4가지)
+-DML(SELECT, INSERT, DELETE, UPDATE)=>CRUD
+-DDL
+-DCL
+-TCL
+
+3. 수업시간 SQL coding rule
+keyword는 대문자, 그외에는 소문자
+
+4. 트랜잭션 : 논리적인 일의 단위 
+모두 성공하거나 모두 실패하거나
+
+5.SQL에 대한 학습이유
+DBMS와 통신할 수 있는 유일한 수단
+
+NOSQL(비정형 제품) ->통신하기 위한 수단들이 제품마다 다르다.
+
+6.
+SELECT 테이블의 컬럼명을 콤마로 구분하여 나열 | * 
+FROM 가져올 데이터가 담긴 테이블이름 
+
+SELECT *
+FROM emp;
+
+SELECT empno, ename
+FROM emp;
+
+연두색아이콘 아래화살표 sem
+비밀번호 java
+----------------------------
+sem계정에 있는 prod 테이블의 모든 컬럼을 조회하는 SELECT 쿼리(SQL)작성
+SELECT *
+FROM prod;
+
+sem계정에 있는 prod 테이블의 prod_id, prod_name 두개의 컬럼만 조회하는 SELECT 쿼리(SQL)작성
+SELECT prod_id, prod_name 
+FROM prod;
+
+FROM절에 테이블말고 뷰라는 것도 올 수 있다.
+
+SELECT(실습 select1)
+
+lprod 테이블에서 모든 테이터를 조회하는 쿼리를 작성하세요
+SELECT * 
+FROM lprod;
+
+buyer 테이블에서 buyer_id, buyer_name 컬럼만 조회하는 쿼리를 작성하세요
+SELECT buyer_id, buyer_name
+FROM buyer;
+
+ cart 테이블에서 모든 데이터를 조회하는 쿼리를 작성하세요
+SELECT * 
+FROM cart;
+
+member 테이블에서 mem_id, mem_pass, mem_name 컬럼만 조회하는 쿼리를 작성하세요
+SELECT mem_id, mem_pass, mem_name
+FROM member;
+
+
+연산
+숫짜,날짜 타입에 대해 가능한 연산
+OPERATING DESCRIPTION
++       더하기
+-        빼기
+*        곱하기
+/         나누기
+( )	우선순위변경
+
+테이터타입 문자 날짜 숫자
+
+컬럼 정보를 보는 방법
+1. SELECT * ==> 컬럼의 이름을 알 수 있다.
+2. SQL DEVELPOPER의 데이터 객체를 알 수 있다.
+
+NUMBER(4,0) 전체자리는 소수점은 없다
+(7,2) 전체자리7 소수점은 둘째자리
+
+VARCHRA2 (10 BYTE)
+문자열의 길이 제한 10바이트까지만 담을 수 있다. 
+
+DESC emp;
+
+describe의 약자이다. 설명하다
+
+널? => 널값을 허용할 수 있는가
+not null 안된다..
+왜?? empno
+
+(null)
+아직모르는값
+
+empno : number ;
+SELECT empno + 10
+FROM emp;
+
+가공을 하더라도 데이터의 수정을 일어나지 않는다.
+데이터를 변경하려면 update문을 써야 한다.
+
+SELECT *ㅣ {column [alias], ......} 
+from table  [alias]
+[order by ....... ]
+
+SELECT *ㅣ {[DISTINCT] column ㅣexpression  [alias], ......} 
+from table  [alias]
+[order by ....... ]
+
+컬럼정보가 아닌 것은 다 EXPRESSION 
+
+empno : number ; ==> expression 
+SELECT empno, empno + 10, 10, hiredate, hire + 10 
+FROM emp;
+
+날짜에다가 10을 더한다는 것은?? 일수 10일 더해준다.
+
+[alias] 컬럼명을 바꿔주는 목적을 가지고 있음
+
+★★시험에 나옴ALIAS : 컬럼의 이름을 변경 
+        컬럼 / expression [AS] [별칭명] 
+
+SELECT empno empno, empno + 10 AS emp_plus
+FROM emp; 시험에 나옴★★
+
+소문자로 입력했는데 왜 대문자로 출력?
+굳이 소문자로 하고 싶으면 문자 양옆에 쌍따옴표/공백도 가능하다
+
+NULL : 아직 모르는 값
+        0과 공백은 NULL과 다르다
+	**** NULL을 포함한 연산은 결과가 항상 NULL ****
+
+shift 역슬래시 /또는 표시 |
+
+<너무중요>
+
+literal : 값 자체
+literal 표기밥: 값을 표현하는 방법
+언어마다 리터럴 표기법이 다름
+
+숫자는 동일
+문자는 "test" 'test'
+
+java 정수 값을 어떻게 표현할까?
+int a = 10;
+float f = 10f;
+long l = 10L;
+String s = "Hello world";
+
+SELECT empno, 10, 'Hello World'
+FROM emp;
+
+★자바와 다르게 문자열을 홑따옴표로 표기해주기!!!!!★
+
+SELECT empno, 10, Hello World
+FROM emp;
+
+Hello는 표현식이었는데 프로그램에서 컬럼이라고 인식 
+자바  + 
+에스큐엘 더하기연산이 수직바2개 ||
+
+함수의개념
+
+single row function 
+단일 행을 기준으로 작업하고 행당 하나의 결과를 반환 
+특정 컬럼 문자열 길이 
+
+CONCAT(ename, ', world')
+입력값을 두개까지만 받는다 3개는 불가 
+
+SELECT *
+FROM user_tables;
+
+결합할 두개의 문자열을 입력받아 결합하고 결합된 문자열을 반환한다.
+        CONCAT(문자열1, 문자열2, 문자열3)
+        CONCAT(문자열1과 문자열2가 결합된 문자열, 문자열3) 
+        CONCAT((문자열1, 문자열2), 문자열3) 
+
+CONCAT(CONCAT('SELECT * FROM ', table_name), ';')
+
+WHERE절 조건연산자
+= 같은값 
+!= <>다른값
+>클떄
+>=크거나 같을떄 
+<작을떄
+<=작거나 같을떄 
+
+-- users 테이블에서 usserid 컬럼의 값이 brown인 사용자만 조회
+SELECT *
+FROM users
+WHERE userid = 'brown' ;
+
+--*** SQL 키워드는 대소문자를 가리지 않지만 데이터 값은 대소문자를 가린다. 
+
+--emp 테이블에서 부서번호가 20번보다 큰 부서에 속한 직원 조회
+SELECT *
+FROM emp
+WHERE deptno > 20;
+
+--emp 테이블에서 부서번호가 20번이 아닌 모든 직원 조회
+SELECT *
+FROM emp
+WHERE deptno != 20;
+
+WHERE : 기술한 조건을 참(TRUE)으로 만족하는 행들만 조회한다.(FILTER) 
+
+SELECT *
+FROM emp
+WHERE 1=1; 모두나옴
+
+SELECT *
+FROM emp
+WHERE 1=2; 한건도 안나옴
+
+SELECT empno, ename, hiredate
+FROM emp
+WHERE hiredate >= '81/03/01'
+
+표기법이 다르기떄문에 문자로 표기하는 건 위험
+
+문자열을 날짜 타입으로 변환하는 방법
+TO_DATE (날짜 문자열, 날짜 문자열의 포맷팅)
+TO_DATE ('1981/12/11', 'YYYY/MM/DD') 
+
+SELECT empno, ename, hiredate
+FROM emp
+WHERE hiredate >= TO_DATE('1981/03/01', 'YYYY/MM/DD');
+
+RR 값이 0~49 19 2019
+     갓이 50~99 59 1959
+YY 값과 관계없이 현재 서버
+날짜의 년도 앞 두자리를 사용
+RRRR / 년도 4자리로 
+YYYY
+
+
